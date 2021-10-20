@@ -7,24 +7,29 @@ public enum Szin {
     KARO('♦');
     private Character megjelenitendoKarakter;
 
-    Szin(Character megjelenitendoKarakter){
+    Szin(Character megjelenitendoKarakter) {
         this.megjelenitendoKarakter = megjelenitendoKarakter;
     }
 
-    public String getkiirasSzine(){
+    public Character getMegjelenitendoKarakter(){
+        return this.megjelenitendoKarakter;
+    }
+
+    public String getkiirasSzine() {
         String ki = "\u001B[30m";
-        if(this == KOR || this == KARO){
+        if (this == KOR || this == KARO) {
             ki = "\u001B[31m";
         }
-        ki += megjelenitendoKarakter+"\u001B[0m";
+        ki += megjelenitendoKarakter + "\u001B[0m";
         return ki;
     }
-    public String getkiirasSzine(String szoveg){
+
+    public String getkiirasSzine(String szoveg) {
         String ki = "\u001B[30m";
-        if(this == KOR || this == KARO){
+        if (this == KOR || this == KARO) {
             ki = "\u001B[31m";
         }
-        ki += szoveg+"\u001B[0m";
+        ki += szoveg + "\u001B[0m";
         return ki;
     }
 }

@@ -17,7 +17,11 @@ public enum Figura {
 
     private String megjelenitendoErtek;
 
-    Figura(String megjelenitendoErtek){
+    Figura(String megjelenitendoErtek) {
         this.megjelenitendoErtek = megjelenitendoErtek;
+    }
+
+    public String getMegjelenitendoErtek() {
+        return this.megjelenitendoErtek;
     }
 }
